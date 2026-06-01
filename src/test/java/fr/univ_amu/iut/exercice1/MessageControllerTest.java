@@ -25,7 +25,6 @@ class MessageControllerTest {
     new MessageApp().start(stage);
   }
 
-  @Disabled("Retire cette annotation pour activer le test")
   @Test
   void au_demarrage_l_apercu_reflete_le_texte_initial(FxRobot robot) {
     Label apercu = robot.lookup("#labelApercu").queryAs(Label.class);
