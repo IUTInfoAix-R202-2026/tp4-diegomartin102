@@ -1,5 +1,6 @@
 package fr.univ_amu.iut.exercice1;
 
+import javafx.beans.binding.Bindings;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -47,6 +48,7 @@ public class MessageViewModel {
             message.setTexte(texte.getValue());
           }
         });
+    apercu.bind(Bindings.concat("Aperçu : ", texte));
   }
 
   public StringProperty texteProperty() {
